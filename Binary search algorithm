@@ -1,0 +1,46 @@
+//A C program for binary search algorithm
+#include<stdio.h>
+ 
+int main()
+{
+    int m[100],i,k,x,key=0,z,last,mid;
+ 
+    printf("Enter the size of array:");
+    scanf("%d",&k);
+    printf("\nEnter the array element in ascending order\n");
+ 
+    for(i=0;i<k;++i)
+        scanf("%d",&m[i]);
+ 
+    printf("\nEnter the element to search:");
+    scanf("%d",&x);
+ 
+    z=0;
+    last=n-1;
+ 
+    while(z<=last)
+    {
+        mid=(z+last)/2;
+ 
+        if(x==m[mid]){
+            key=1;
+            break;
+        }
+        else
+            if(x>m[mid])
+                z=mid+1;
+            else
+                last=mid-1;
+    }
+ 
+    if(key==1)
+    {
+        printf("\nElement found at position %d",mid+1);
+    }
+    else
+    {
+        printf("\nElement not found");
+    } 
+   
+    return 0;
+}
